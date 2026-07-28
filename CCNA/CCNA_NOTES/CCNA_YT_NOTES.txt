@@ -11,3 +11,11 @@
 # COMPUTER NETWORK
 -- A Network is a digital communications network, which allows nodes to share resources
 -- Nodes: Router, Switch, Firewall, Server, Client
+
+### Cisco Switch Commands ###
+
+# enable
+-- Purpose = enter privileged EXEC mode, Prompt Change = Switch> → Switch#
+
+# show mac address-table
+-- Purpose = show learned MAC addresses, Output Meaning = MAC Address → VLAN → Switch Port
