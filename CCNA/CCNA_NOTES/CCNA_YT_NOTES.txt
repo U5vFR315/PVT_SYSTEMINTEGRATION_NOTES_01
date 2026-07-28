@@ -1,3 +1,13 @@
 #################
 # CCNA_YT_NOTES #
 #################
+
+>>> Free CCNA v1.1 200-301 | Complete Course 2026
+>>> CURRENT VIDEO: 03
+
+>>> NetworkChuck FREE CCNA
+>>> CURRENT VIDEO: 03
+
+# COMPUTER NETWORK
+-- A Network is a digital communications network, which allows nodes to share resources
+-- Nodes: Router, Switch, Firewall, Server, Client
