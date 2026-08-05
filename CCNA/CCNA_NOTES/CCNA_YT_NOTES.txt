@@ -6,7 +6,7 @@
 >>> CURRENT VIDEO: 03
 
 >>> NetworkChuck FREE CCNA
->>> CURRENT VIDEO: 07 (EP 06)
+>>> CURRENT VIDEO: 08 (EP 07)
 
 # COMPUTER NETWORK
 -- A Network is a digital communications network, which allows nodes to share resources
@@ -19,3 +19,20 @@
 
 # show mac address-table
 -- Purpose = show learned MAC addresses, Output Meaning = MAC Address → VLAN → Switch Port
+
+# Multilayer Switch
+-- Funktion = Kombiniert Layer-2-Switching und Layer-3-Routing
+-- Layer 2 = Leitet Frames anhand von MAC-Adressen weiter
+-- Layer 3 = Routet Pakete zwischen verschiedenen VLANs und IP-Netzen
+-- Inter-VLAN Routing = Erfolgt über SVIs direkt auf dem Switch
+-- Vorteil = Schneller als Router-on-a-Stick, da Routing hardwarebasiert erfolgt
+-- Voraussetzung = `ip routing` aktivieren und VLAN-Interfaces konfigurieren
+
+# Tier Architecture
+-- 1-Tier = Alle Geräte hängen an einem zentralen Switch; einfach, aber wenig skalierbar
+-- 2-Tier = Access Layer verbindet Endgeräte; Distribution und Core sind kombiniert
+-- 3-Tier = Access, Distribution und Core sind getrennte Schichten
+-- Access Layer = Anschluss von PCs, Druckern und Access Points
+-- Distribution Layer = Routing zwischen VLANs und Anwendung von Richtlinien
+-- Core Layer = Schnelle Verbindung zwischen den Netzwerkbereichen
+-- Multilayer Switch = Übernimmt Switching auf Layer 2 und Routing auf Layer 3
