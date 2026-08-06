@@ -36,3 +36,25 @@
 -- Distribution Layer = Routing zwischen VLANs und Anwendung von Richtlinien
 -- Core Layer = Schnelle Verbindung zwischen den Netzwerkbereichen
 -- Multilayer Switch = Übernimmt Switching auf Layer 2 und Routing auf Layer 3
+
+# Spine/Leaf (Clos) Design
+-- Leaf Switches = Verbinden Server, Storage und andere Endgeräte
+-- Spine Switches = Verbinden alle Leaf Switches untereinander
+-- Clos Fabric = Jeder Leaf ist mit jedem Spine verbunden
+-- East-West Traffic = Optimiert für Server-zu-Server-Kommunikation
+-- ECMP = Mehrere gleichwertige Pfade werden parallel genutzt
+-- Vorteil = Hohe Skalierbarkeit, Redundanz und vorhersehbare Latenz
+
+# Underlay
+-- Underlay = Physisches Layer-3-Netz zwischen Leaf und Spine
+-- Aufgabe = IP-Erreichbarkeit zwischen allen Netzwerkgeräten sicherstellen
+-- Protokolle = Häufig BGP, OSPF oder IS-IS
+-- Transport = Trägt den Overlay-Traffic durch die Fabric
+
+# Overlay,
+-- Overlay = Virtuelle Netzwerke über dem Underlay
+-- Technik = Häufig VXLAN
+-- Control Plane = Meist BGP EVPN
+-- Funktion = Mandantentrennung, Layer-2-Erweiterung und virtuelle Segmente
+-- VTEP = Kapselt und entkapselt VXLAN-Traffic auf den Leaf Switches
+
