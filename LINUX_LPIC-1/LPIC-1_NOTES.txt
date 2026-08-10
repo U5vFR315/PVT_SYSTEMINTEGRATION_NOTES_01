@@ -4,4 +4,4 @@
 
 # YOUTUBEVIDEO
 -- https://www.youtube.com/watch?v=AKkNUvEHXhk&list=PLFOYXCPEqdNUU55Xvgst8wGTWnz_sd-cj
--- CURRENT VIDEO: 02
+-- CURRENT VIDEO: LPIC 1 - 004 >  6mins
