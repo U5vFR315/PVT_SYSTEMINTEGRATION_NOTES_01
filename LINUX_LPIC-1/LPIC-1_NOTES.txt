@@ -4,8 +4,8 @@
 
 # YOUTUBEVIDEO
 -- https://www.youtube.com/watch?v=AKkNUvEHXhk&list=PLFOYXCPEqdNUU55Xvgst8wGTWnz_sd-cj
--- CURRENT VIDEO: LPIC 1 - 006 - 101.1 - Part 3/3 - Determine and Configure Hardware, Commands 
-> 07:00
+-- CURRENT VIDEO:  LPIC 1 - 008 - 101.2 - Part 2/2 - Boot Process; logs (dmesg, logs, journalctl) & init (systemd&SysV) 
+> 00:00
 
 # sudo lshw       
 -- Detaillierte Hardware-Infos, sudo lshw -short = kompakte Übersicht
