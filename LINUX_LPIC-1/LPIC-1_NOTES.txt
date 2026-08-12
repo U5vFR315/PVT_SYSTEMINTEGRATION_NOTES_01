@@ -5,7 +5,13 @@
 # YOUTUBEVIDEO
 -- https://www.youtube.com/watch?v=AKkNUvEHXhk&list=PLFOYXCPEqdNUU55Xvgst8wGTWnz_sd-cj
 -- CURRENT VIDEO:  LPIC 1 - 008 - 101.2 - Part 2/2 - Boot Process; logs (dmesg, logs, journalctl) & init (systemd&SysV) 
-> 00:00
+> 05:00
+
+# Linux dmesg
+-- Zweck = Zeigt Meldungen des Linux-Kernels
+-- Quelle = Kernel-Ringbuffer im Arbeitsspeicher
+-- Inhalt = Hardware, Treiber, USB, Netzwerk, Festplatten, Kernel-Fehler
+-- Nützlich für = Treiber-, Hardware-, USB-, Festplatten- und Boot-Probleme
 
 # sudo lshw       
 -- Detaillierte Hardware-Infos, sudo lshw -short = kompakte Übersicht
