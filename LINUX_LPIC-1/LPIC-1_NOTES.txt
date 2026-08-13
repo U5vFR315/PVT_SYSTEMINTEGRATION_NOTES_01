@@ -4,11 +4,14 @@
 
 # YOUTUBEVIDEO
 -- https://www.youtube.com/watch?v=AKkNUvEHXhk&list=PLFOYXCPEqdNUU55Xvgst8wGTWnz_sd-cj
--- CURRENT VIDEO:  LPIC 1 - 008 - 101.2 - Part 2/2 - Boot Process; logs (dmesg, logs, journalctl) & init (systemd&SysV) 
-> 05:00
+-- CURRENT VIDEO:   LPIC1 - 009 - 101.3 - Runlevels and targets (1/2), Concepts and updating 
+> 0:00
 
 # COMMANDOS
 -- readlink -f FILE = Resolve a path completely and show the final real file
+-- ps -p 1 = Zeigt den Prozess mit der PID 1 an (normalerweise init bzw. systemd)
+-- pstree = Zeigt laufende Prozesse hierarchisch als Prozessbaum mit Parent-/Child-Beziehungen an
+
 
 
 # Linux dmesg
