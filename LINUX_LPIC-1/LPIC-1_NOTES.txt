@@ -5,7 +5,7 @@
 # YOUTUBEVIDEO
 -- https://www.youtube.com/watch?v=AKkNUvEHXhk&list=PLFOYXCPEqdNUU55Xvgst8wGTWnz_sd-cj
 -- CURRENT VIDEO:   LPIC1 - 009 - 101.3 - Runlevels and targets (1/2), Concepts and updating 
-> 0:00
+> 04:00
 
 # COMMANDOS
 -- readlink -f FILE = Resolve a path completely and show the final real file
