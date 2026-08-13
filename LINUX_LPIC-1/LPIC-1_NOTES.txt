@@ -7,6 +7,10 @@
 -- CURRENT VIDEO:  LPIC 1 - 008 - 101.2 - Part 2/2 - Boot Process; logs (dmesg, logs, journalctl) & init (systemd&SysV) 
 > 05:00
 
+# COMMANDOS
+-- readlink -f FILE = Resolve a path completely and show the final real file
+
+
 # Linux dmesg
 -- Zweck = Zeigt Meldungen des Linux-Kernels
 -- Quelle = Kernel-Ringbuffer im Arbeitsspeicher
