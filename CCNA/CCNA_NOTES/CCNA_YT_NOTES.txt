@@ -6,7 +6,7 @@
 >>> CURRENT VIDEO: 03
 
 >>> NetworkChuck FREE CCNA
->>> CURRENT VIDEO: 09 (EP 08)
+>>> CURRENT VIDEO: 09 (EP 08) 05 mins
 
 # COMPUTER NETWORK
 -- A Network is a digital communications network, which allows nodes to share resources
