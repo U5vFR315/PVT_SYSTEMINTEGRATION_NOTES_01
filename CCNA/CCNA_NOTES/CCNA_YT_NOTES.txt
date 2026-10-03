@@ -2,8 +2,8 @@
 # CCNA_YT_NOTES #
 #################
 
->>> Free CCNA v1.1 200-301 | Complete Course 2026
->>> CURRENT VIDEO: 03
+>>> JEREMYS IT LAB
+>>> CURRENT VIDEO: 08 Free CCNA | Intro to the CLI | Day 4 | CCNA 200-301 Complete Course 
 
 >>> NetworkChuck FREE CCNA
 >>> CURRENT VIDEO: 10 (EP 08) 21.12 mins
