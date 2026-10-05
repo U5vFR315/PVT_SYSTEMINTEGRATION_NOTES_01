@@ -3,4 +3,4 @@
 #########
 
 # CURRENT: CCNA 200-301
--- VLAN & Trunking Questions 2
+-- STP & VTP Questions
