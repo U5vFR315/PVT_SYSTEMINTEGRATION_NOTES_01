@@ -3,7 +3,7 @@
 #########
 
 # CURRENT: CCNA 200-301
--- OSPF Questions
+-- OSPF Quiz
 
 # RE DO - WILDE NUMMERN
 -- CCNA 200-301: IP Routing Questions 1 & 2
