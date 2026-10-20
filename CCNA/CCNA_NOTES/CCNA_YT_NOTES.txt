@@ -8,79 +8,153 @@
 >>> NetworkChuck FREE CCNA
 >>> CURRENT VIDEO: 10 (EP 08) 21.12 mins
 
-========================================
-CCNA – ACL WILDCARD BERECHNUNG
-========================================
+==================================================
+CCNA – ACL WILDCARD: BINÄRMETHODE (IMMER SICHER)
+==================================================
 
-WEG 1: WILDCARD GEGEBEN → IP-BEREICH BERECHNEN
-----------------------------------------
+GRUNDREGEL:
+Wildcard-Bit 0 = Bit muss übereinstimmen
+Wildcard-Bit 1 = Bit darf beliebig sein
+
+Binärstellen:
+128 64 32 16 8 4 2 1
+
+
+==================================================
+WEG 1: WILDCARD GEGEBEN → IP-BEREICH ERMITTELN
+==================================================
 
 BEISPIEL:
 IP:        10.120.160.0
 Wildcard:  0.0.7.255
 
-1. SUBNETZMASKE BERECHNEN
-   255 - 7 = 248
+1. RELEVANTES OKTETT BINÄR UMWANDELN
 
-2. BLOCKGRÖSSE BERECHNEN
-   256 - 248 = 8
+   3. Oktett:
 
-3. IP-BEREICH BESTIMMEN
-   Start: 160
-   Ende:  160 + 8 - 1 = 167
+   IP:       160 = 10100000
+   Wildcard:   7 = 00000111
+
+2. BITS VERGLEICHEN
+
+   IP:             10100000
+   Wildcard:       00000111
+   Ergebnis:       10100XXX
+
+   0 = Bit bleibt gleich
+   1 = Bit ist variabel (X)
+
+3. KLEINSTEN UND GRÖSSTEN WERT BILDEN
+
+   Kleinster Wert (alle X = 0):
+   10100000 = 160
+
+   Größter Wert (alle X = 1):
+   10100111 = 167
+
+4. VOLLSTÄNDIGEN IP-BEREICH BESTIMMEN
+
+   1. Oktett: 10 bleibt gleich
+   2. Oktett: 120 bleibt gleich
+   3. Oktett: 160–167
+   4. Oktett: 0–255 (Wildcard 255)
 
 ERGEBNIS:
 10.120.160.0 – 10.120.167.255
 
 
-WEG 2: IP-ADRESSEN GEGEBEN → WILDCARD BERECHNEN
-----------------------------------------
+==================================================
+WEG 2: IP-NETZE GEGEBEN → WILDCARD ERMITTELN
+==================================================
 
 BEISPIEL:
-192.168.16.0
-192.168.17.0
-192.168.18.0
-192.168.19.0
+192.168.16.0/24
+192.168.17.0/24
+192.168.18.0/24
+192.168.19.0/24
 
-1. BLOCKGRÖSSE BESTIMMEN
-   16, 17, 18, 19 = 4 Werte
-   Blockgröße = 4
+1. VERÄNDERLICHES OKTETT BINÄR UMWANDELN
 
-2. SUBNETZMASKE BERECHNEN
-   256 - 4 = 252
+   3. Oktett:
 
-3. WILDCARD BERECHNEN
-   255 - 252 = 3
+   16 = 00010000
+   17 = 00010001
+   18 = 00010010
+   19 = 00010011
+
+2. BITS VERGLEICHEN
+
+   16 = 00010000
+   17 = 00010001
+   18 = 00010010
+   19 = 00010011
+        ||||||XX
+
+   Erste 6 Bits sind gleich.
+   Letzte 2 Bits unterscheiden sich.
+
+3. WILDCARD BILDEN
+
+   Gleiche Bits       = 0
+   Unterschiedliche   = 1
+
+   Wildcard binär: 00000011
+
+4. WILDCARD IN DEZIMAL UMWANDELN
+
+   Binär: 00000011
+   Werte: 128 64 32 16 8 4 2 1
+                            ^ ^
+                            2+1 = 3
+
+   Wildcard im 3. Oktett = 3
+
+5. VOLLSTÄNDIGE WILDCARD ERSTELLEN
+
+   1. Oktett: 0   (192 bleibt gleich)
+   2. Oktett: 0   (168 bleibt gleich)
+   3. Oktett: 3   (2 variable Bits)
+   4. Oktett: 255 (alle 8 Bits variabel)
+
+   Wildcard: 0.0.3.255
 
 ERGEBNIS:
-IP:        192.168.16.0
-Wildcard:  0.0.3.255
-
-ACL:
 access-list 10 permit 192.168.16.0 0.0.3.255
 
 
-========================================
+==================================================
 MERKSÄTZE
-========================================
+==================================================
 
-WEG 1: Wildcard → IP-Bereich
-255 - Wildcard = Subnetzmaske
-256 - Subnetzmaske = Blockgröße
+WEG 1: WILDCARD → IP-BEREICH
 
-WEG 2: IP-Bereich → Wildcard
-256 - Blockgröße = Subnetzmaske
-255 - Subnetzmaske = Wildcard
+1. IP und Wildcard binär darstellen.
+2. Wildcard 0 = Bit bleibt gleich.
+3. Wildcard 1 = Bit wird X (variabel).
+4. Alle X = 0 → kleinster Wert.
+5. Alle X = 1 → größter Wert.
 
-MÖGLICHE BLOCKGRÖSSEN:
-1, 2, 4, 8, 16, 32, 64, 128, 256
+
+WEG 2: IP-NETZE → WILDCARD
+
+1. IP-Netze binär darstellen.
+2. Alle Bits vergleichen.
+3. Gleiche Bits → Wildcard 0.
+4. Unterschiedliche Bits → Wildcard 1.
+5. Wildcard binär in dezimal umwandeln.
+
 
 WICHTIG:
-- Gilt für normale, zusammenhängende Wildcards.
-- Die Blöcke müssen korrekt ausgerichtet sein.
-- Bei nicht zusammenhängenden Wildcards:
-  Binärmethode verwenden.
-========================================
+- Binärmethode funktioniert bei ALLEN Wildcards.
+- Bei nicht zusammenhängenden Wildcards können
+  zwischen kleinstem und größtem Wert Lücken liegen.
+- Bei Weg 2 beschreibt die Wildcard die kleinste
+  Bitmaske, die alle angegebenen Netze abdeckt.
+- Sind zusätzliche Adressen unerwünscht, muss
+  geprüft werden, ob die Maske exakt passt.
+
+==================================================
+
 
 
 # COMPUTER NETWORK
