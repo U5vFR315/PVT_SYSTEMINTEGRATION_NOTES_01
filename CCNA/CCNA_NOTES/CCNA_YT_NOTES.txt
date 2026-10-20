@@ -8,6 +8,81 @@
 >>> NetworkChuck FREE CCNA
 >>> CURRENT VIDEO: 10 (EP 08) 21.12 mins
 
+========================================
+CCNA – ACL WILDCARD BERECHNUNG
+========================================
+
+WEG 1: WILDCARD GEGEBEN → IP-BEREICH BERECHNEN
+----------------------------------------
+
+BEISPIEL:
+IP:        10.120.160.0
+Wildcard:  0.0.7.255
+
+1. SUBNETZMASKE BERECHNEN
+   255 - 7 = 248
+
+2. BLOCKGRÖSSE BERECHNEN
+   256 - 248 = 8
+
+3. IP-BEREICH BESTIMMEN
+   Start: 160
+   Ende:  160 + 8 - 1 = 167
+
+ERGEBNIS:
+10.120.160.0 – 10.120.167.255
+
+
+WEG 2: IP-ADRESSEN GEGEBEN → WILDCARD BERECHNEN
+----------------------------------------
+
+BEISPIEL:
+192.168.16.0
+192.168.17.0
+192.168.18.0
+192.168.19.0
+
+1. BLOCKGRÖSSE BESTIMMEN
+   16, 17, 18, 19 = 4 Werte
+   Blockgröße = 4
+
+2. SUBNETZMASKE BERECHNEN
+   256 - 4 = 252
+
+3. WILDCARD BERECHNEN
+   255 - 252 = 3
+
+ERGEBNIS:
+IP:        192.168.16.0
+Wildcard:  0.0.3.255
+
+ACL:
+access-list 10 permit 192.168.16.0 0.0.3.255
+
+
+========================================
+MERKSÄTZE
+========================================
+
+WEG 1: Wildcard → IP-Bereich
+255 - Wildcard = Subnetzmaske
+256 - Subnetzmaske = Blockgröße
+
+WEG 2: IP-Bereich → Wildcard
+256 - Blockgröße = Subnetzmaske
+255 - Subnetzmaske = Wildcard
+
+MÖGLICHE BLOCKGRÖSSEN:
+1, 2, 4, 8, 16, 32, 64, 128, 256
+
+WICHTIG:
+- Gilt für normale, zusammenhängende Wildcards.
+- Die Blöcke müssen korrekt ausgerichtet sein.
+- Bei nicht zusammenhängenden Wildcards:
+  Binärmethode verwenden.
+========================================
+
+
 # COMPUTER NETWORK
 -- A Network is a digital communications network, which allows nodes to share resources
 -- Nodes: Router, Switch, Firewall, Server, Client
