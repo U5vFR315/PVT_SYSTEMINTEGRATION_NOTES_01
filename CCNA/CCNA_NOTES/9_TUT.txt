@@ -7,3 +7,6 @@
 
 # RE DO - WILDE NUMMERN
 -- CCNA 200-301: IP Routing Questions 1 & 2
+
+
+>>> 4.4 SNMP – Simple Network Management Protocol
