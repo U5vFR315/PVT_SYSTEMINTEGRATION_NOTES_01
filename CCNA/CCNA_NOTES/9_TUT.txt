@@ -3,8 +3,7 @@
 #########
 
 # CURRENT: CCNA 200-301
--- https://www.9tut.com/vpn-questions
-
+-- https://www.9tut.com/automation-questions
 # RE DO - WILDE NUMMERN
 -- CCNA 200-301: IP Routing Questions 1 & 2
 
