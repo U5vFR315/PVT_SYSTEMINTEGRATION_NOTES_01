@@ -3,7 +3,8 @@
 #########
 
 # CURRENT: CCNA 200-301
--- https://www.9tut.com/automation-questions
+-- https://www.9tut.com/how-to-learn-and-prepare-for-the-exam
+
 # RE DO - WILDE NUMMERN
 -- CCNA 200-301: IP Routing Questions 1 & 2
 
