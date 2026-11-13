@@ -3,7 +3,8 @@
 #########
 
 # CURRENT: CCNA 200-301
--- https://www.9tut.com/how-to-learn-and-prepare-for-the-exam
+-- https://www.9tut.com/ccnav7-2020-new-questions-part-5
+
 
 # RE DO - WILDE NUMMERN
 -- CCNA 200-301: IP Routing Questions 1 & 2
